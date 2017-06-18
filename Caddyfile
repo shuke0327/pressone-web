@@ -1,4 +1,4 @@
-press.one:80
+press.one
 
 gzip
 log ../access.log {
