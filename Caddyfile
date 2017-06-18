@@ -1,3 +1,8 @@
-press.one
+press.one:80
 
-log ../access.log
+gzip
+log ../access.log {
+  rotate_size 1000
+  rotate_age  7
+  rotate_keep 3
+}
