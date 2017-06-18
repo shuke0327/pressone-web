@@ -1,1 +1,3 @@
-localhost:80
+press.one:80
+
+log ../access.log
