@@ -1,1 +1,2 @@
 localhost:80
+log ../access.log
