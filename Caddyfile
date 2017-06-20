@@ -1,8 +1,11 @@
 press.one
 
 gzip
+
 log ../access.log {
   rotate_size 1000
   rotate_age  7
   rotate_keep 3
 }
+
+ext .html
