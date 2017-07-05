@@ -38,3 +38,7 @@
   width: 36px;
   height: 36px;
 }
+
+#applications-typing span {
+  vertical-align: baseline;
+}
