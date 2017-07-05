@@ -54,6 +54,50 @@ $(function() {
   |
   */
 
+    var nowChart = new Chart($("#now-chart"), {
+        type: 'pie',
+        data: {
+          labels: ["渠道", "出版商", "作者"],
+          datasets: [{
+            data: [60, 30, 10],
+            backgroundColor: [
+              'rgba(184, 184, 184, 1)',
+              'rgba(154, 154, 154, 1)',
+              'rgba(142, 166, 230, 1)'
+            ],
+            borderWidth: 1
+          }]
+        }
+    })
 
+    var futureChart = new Chart($("#future-chart"), {
+        type: 'pie',
+        data: {
+          labels: ["作者", "用户", "平台"],
+          datasets: [{
+            data: [49, 49, 2],
+            backgroundColor: [
+              'rgba(142, 166, 230, 1)',
+              'rgba(142, 229, 200, 1)',
+              'rgba(200, 144, 122, 1)'
+            ],
+            borderWidth: 1
+          }]
+        }
+    })
 
+    var contentChart = new Chart($("#content-chart"), {
+        type: 'doughnut',
+        data: {
+          labels: ["收费内容", "付费内容"],
+          datasets: [{
+            data: [90, 10],
+            backgroundColor: [
+              'rgba(142, 166, 230, 1)',
+              'rgba(142, 229, 200, 1)'
+            ],
+            borderWidth: 1
+          }]
+        }
+    })
 });

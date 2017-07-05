@@ -42,3 +42,18 @@
 #applications-typing span {
   vertical-align: baseline;
 }
+
+.chart {
+  max-width: 300px;
+}
+
+@media (min-width: 768px) {
+  #now-chart, #content-chart {
+    margin-left: 120px;
+  }
+}
+
+#team-avatar {
+  width: 128px;
+  height: 128px;
+}
