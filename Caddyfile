@@ -28,3 +28,4 @@ errors ../error.log {
 minify
 
 redir /beta/ / 302
+redir /beta / 302
