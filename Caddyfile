@@ -26,3 +26,5 @@ errors ../error.log {
 }
 
 minify
+
+redir /beta/ / 302
