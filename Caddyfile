@@ -25,6 +25,4 @@ errors ../error.log {
   rotate_keep 3
 }
 
-git github.com/press-one/pressone-web
-
 minify
