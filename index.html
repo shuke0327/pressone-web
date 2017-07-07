@@ -16,6 +16,17 @@
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
     <link rel="icon" href="assets/img/favicon.png">
+    <script>
+      var language = (navigator.browserLanguage || navigator.language).toLowerCase();
+
+      switch(language) {
+        case 'zh-cn':
+          location.href = "/"
+          break;
+        default:
+          location.href = "/en"
+      }
+    </script>
   </head>
 
   <body>

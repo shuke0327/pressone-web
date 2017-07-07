@@ -1,224 +1,533 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
 
-		<title>Press.One</title>
+    <title>PressOne</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <!-- Styles -->
+    <link href="assets/css/core.min.css" rel="stylesheet">
+    <link href="assets/css/thesaas.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
 
-		<style type="text/css">
-			#title h1 {text-transform: capitalize;}
-			#title p {
-				text-align: center;
-				font-size: 0.8em;
-			}
-			.reveal p {
-				text-align: left;
-				margin: 1.2em 1em;
-			}
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" href="assets/img/favicon.png">
+    <script>
+      var language = (navigator.browserLanguage || navigator.language).toLowerCase();
 
-			#language {
-				position: absolute;
-				top: 1em;
-				right: 1em;
-				font-size: 0.4em;
-				z-index: 999;
-			}
-		</style>
+      switch(language) {
+        case 'zh-cn':
+          location.href = "/"
+          break;
+        default:
+          location.href = "/en"
+      }
+    </script>
+  </head>
 
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+  <body>
 
-	</head>
 
-	<body>
-		<div class="reveal">
-			<div id="language">
-				English | <a href="/cn">中文</a>
-			</div>
+    <!-- Topbar -->
+    <nav class="topbar topbar-inverse topbar-expand-sm">
+      <div class="container">
 
-			<div class="slides">
-				<section data-markdown id="title">
-					<textarea data-template>
-							# Press.One
+        <div class="topbar-left">
+          <a class="topbar-brand" href="/">
+            <img class="logo-inverse" src="assets/img/pressone-logo.gif" alt="logo">
+            <span id="brand-title">PressOne</span>
+          </a>
+        </div>
 
-							by XiaoLai Li
-					</textarea>
-				</section>
+        <div class="topbar-right">
+          <!-- <a class="btn btn-sm btn-outline btn-white" href="#">PDF Download</a> -->
+        </div>
 
-				<section data-markdown>
-					<textarea data-template>
-						If Bitcoin is the first successful blockchain application that
-						revolutionized the business model of banks in a decentralized way,
-						then PressOne will revolutionize the business model of the press
-						by decentralizing how content providers connect and get rewarded.
-					</textarea>
-				</section>
+      </div>
+    </nav>
+    <!-- END Topbar -->
 
-				<section data-markdown>
-					<textarea data-template>
-						PressOne will possibly become the biggest public chain on the Internet.
 
-						Since the Internet comprises of contents, such as texts, images, sounds or videos,
-						revolutionizing existing distribution channels may well mean to "reconstruct the whole Internet".
+    <!-- Header -->
+    <header class="header header-inverse h-fullscreen p-0 bg-primary overflow-hidden" style="background-image: linear-gradient(to right, #434343 0%, black 100%);">
+      <canvas class="constellation"></canvas>
 
-						PressOne will quite possibly become the most natural and profuse public chain of
-						DAPPs (decentralized applications).
-					</textarea>
-				</section>
+      <div class="container text-center">
 
-				<section data-markdown>
-					<textarea data-template>
-						Content-creation business consists of three parts: production, discovery and distribution.
+        <div class="row h-full align-items-center">
+          <div class="col-12 col-md-8 offset-md-2">
 
-						Production must be provided by outstanding individuals or teams,
-						and thus it does not have to be decentralized.
-					</textarea>
-				</section>
+            <h1 class="display-4">Decentralized Contents Distribution Platform</h1>
+            <br>
+            <p class="lead text-white fs-20">
+              Pressone is a public chain used for contents distribution based on EOS blockchain ground facilites.
+              People can build various types of content based DAPPs here, such as:
+            </p>
+            <p class="lead fs-20" id="applications-typing">
+              <span class="text-primary" data-type="Forum, Blog, Micropost, E-commerce, Music Sharing, Picture Social, video on air"></span>
+            </p>
+            <!-- <br>
+            <h3></h3>
+            <br>
+            <div class="countdown countdown-sm countdown-outline countdown-inverse countdown-uppercase" data-countdown="2017/07/12"></div> -->
+          </div>
+        </div>
 
-				<section data-markdown>
-					<textarea data-template>
-						Discovery and distribution, however, are where a decentralized network gains an edge…
+      </div>
+    </header>
+    <!-- END Header -->
 
-						By decentralizing discovery and distribution,
-						content producers no longer need to rely on one or a few parties to
-						compensate them for producing content - rather, they are rewarded by the crowd.
-					</textarea>
-				</section>
 
-				<section data-markdown>
-					<textarea data-template>
-						When a piece of work is finished, the market will take care of the rest.
-						Releasing a new work means publishing a new "asset" (the securitization of content),
-						and its value will be proved by the market.
+    <!-- Main container -->
+    <main class="main-content">
 
-						In this way, the producer, discoverer and distributor's roles may overlap,
-						but any of them could seek profit from any of these activities.
-					</textarea>
-				</section>
+      <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Features
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+      <section class="section bg-gray">
+        <div class="container">
+          <header class="section-header">
+            <h2>What problem will we solve?</h2>
+            <hr>
+            <p class="lead">
+              Now is the time to revolutionize the traditional content distribution mode
+            </p>
+          </header>
 
-				<section data-markdown>
-					<textarea data-template>
-						Using a real-name system in decentralized protocols is not nearly scary
-						as some people have imagined.
-						On the contrary, it may encourage people to make reliable comments…
 
-						If anyone intends to hide his/her identity,
-						then luckily they have no worries —
-						for there are countless other ways and places on the Internet that one can assume anonymity...
-					</textarea>
-				</section>
+          <div class="row gap-y align-items-center">
+            <div class="col-12 col-md-7">
+              <h4>The problem of centralized content distribution mode</h4>
+              <p>
+                the publishing channels is mono by the publish organizations,
+                on the one side, the  account and sale amount is neither public nor transparent,
+                which damages the benefit of creators;
+                on the other side, publish organizations has a strong instinct to use a as b,
+                which decreases the ratio of contents with high qualities.
 
-				<section data-markdown>
-					<textarea data-template>
-						Sensible censorship by the decentralized protocol is also not terrifying,
-						for it can enhance the quality of contents. and keep the community members safe.
+                出版方垄断发行渠道，一方面账务和销售数量不公开透明，使得创作者常常暗中受到损失，
+                另一方面出版方又有很大的动力以次充好，进而造成优秀内容比例的下降。
+              </p>
+              <p>
+                The key problem lies in the distribution of benefit within content industry.
+                With a more reasonable benefit distribution mechanism, many problems would have been solved.
+                Take book for example, the part of the authors' tax take 7~15% percent, 
+                the cost of paper takes about 10%,
+                and, where the left flows? actually, they flow into the processes that should not exist...
+                In the Internet age, even the cost of paper should be eliminated, isn't that right?
+                而关键的问题，是内容行业的利益分配，如果利益分配更合理的话，很多问题可以解决。
+                比如图书，作者的版税比例通常在7-15%之间，纸张成本大约10%左右，
+                那么剩下的去哪里了呢？流到了各个事实上完全没必要存在的环节而已......
+                到了互联网时代，甚至连纸张成本都应该剔除，不是吗？
+              </p>
+            </div>
 
-						Censorship does not always constrain freedom for a similar reason:
-						if one hates censorship, plenty of ways and places are available on the Internet.
-					</textarea>
-				</section>
+            <div class="col-12 col-md-5">
+              <canvas class="rounded chart" data-aos="zoom-in" id="now-chart">
+            </div>
+          </div>
 
-				<section data-markdown>
-					<textarea data-template>
-						PressOne is not merely a Chinese project.
-						The mechanisms it provides are the same for people of any nationality,
-						race, gender, language, etc.
+          <hr>
 
-						Nor is PressOne a competitor of Steem.
-						In fact, we are collaborators — complementary to meet different needs.
-					</textarea>
-				</section>
+          <div class="row gap-y align-items-center">
+            <div class="col-12 col-md-5">
+              <canvas class="rounded chart" data-aos="zoom-in" id="future-chart">
+            </div>
 
-				<section data-markdown>
-					<textarea data-template>
-						Traditional "whitepapers" will not be provided before the official launch of PressOne
-						(truth is, rarely do people read or understand whitepapers).
+            <div class="col-12 col-md-7">
+              <h4>Refact the benefit disposit mode within system using the decentralization去中心化的方法重构体系内的利益分配</h4>
+              <p>
+                As the ground protocol for the new generation Internet, blockchain has the most valuable power , and any applications built under blockchain, born with an almost independent economic system.区块链作为新一代互联网的底层协议，最神奇的地方在于，在它基础上建立的一切应用，天然拥有一个几乎独立的经济体系，
+                So, developers of one application can define the benefit distribution rules within the new economic system.
+                于是，开发者们就可以用智能合约来定义这个新经济体内的利益分配规则。
+              </p>
+              <p>
+                For content industry, after decentralization revolution, only two roles left: Producer and User.
+                去中心化之后，内容产业只剩下两个最基本的角色：作者（Producer）和用户（User），
+                The profits will be re-distributed.
+                在这种情况下，利益将重新进行分配。
+              </p>
+            </div>
+          </div>
 
-						When PressOne will be officially released,
-						ever-perfecting documentations will be provided to support succeeding developers.
-					</textarea>
-				</section>
+          <hr>
 
-				<section data-markdown>
-					<textarea data-template>
-						Based on PressOne, developers and operators can easily
-						build various content circles, social media, etc.
+          <div class="row gap-y align-items-center">
+            <div class="col-12 col-md-7">
+              <h4>New Contents in the New System</h4>
+              <p>
+                在去中心化的体系中，内容只有收费和付费两种，前者是想看就要付钱的，如小说、音乐、影视，后者是付费求别人看的，如广告。
+              </p>
+              <p>
+                在这种体系下，免费内容不存在，也没必要存在，因为可以收极低的费用，但费用哪怕是接近于零，也一定要大于零，这是消灭99.99%垃圾信息的极有效方法。
+              </p>
+            </div>
 
-						This will not be just a game for tech geeks,
-						but an invaluable opportunity for all to ride on the latest trend.
-						They don't need to know technologies or blockchain —
-						just like anybody can use cash without profound financial knowledge.
-					</textarea>
-				</section>
+            <div class="col-12 col-md-5">
+              <canvas class="rounded chart" data-aos="zoom-in" id="content-chart">
+            </div>
+          </div>
 
-				<section data-markdown>
-					<textarea data-template>
-						PressOne can be imagined as a giant incubator.
-						We will organize "campaigns" for entities that intend to grow vertically,
-						and circle members will select the best candidates or teams possible to "go on the expedition".
-					</textarea>
-				</section>
+          <hr>
 
-				<section data-markdown>
-					<textarea data-template>
-						PressOne is not a company — in the blockchain world,
-						a company entity is not theoretically necessary.
-						The ideal objective of a successful blockchain project is to
-						build a decentralized self-autonomous enterprise/organization.
+          <div class="row gap-y align-items-center">
+            <div class="col-12 col-md-5">
+              <img class="rounded shadow-2" src="assets/img/bg-laptop.jpg" alt="..." data-aos="zoom-in">
+            </div>
 
-						All of the rules should be written in the smart contract,
-						rather than enforced by management.
-						Only in this way can it be sustainable and scalable.
-					</textarea>
-				</section>
+            <div class="col-12 col-md-7">
+              <h4>新体系下的新用户行为</h4>
+              <p>
+                用户对内容的进一步行为，有阻止传播和促进传播两类，前者如发表差评，后者如发表好评，以及转发，这就是新的内容发行机制。
+              </p>
 
-				<section data-markdown>
-					<textarea data-template>
-						Why us?
+              <p>
+                去中心化的网络可以使用共识机制为产生行为的用户打分，从而找到真正有能力鉴别和孵化内容的用户。
+              </p>
 
-						First, we are based in China, a country with world's most Internet users.
-						Second, Chinese developers are global leaders in user experience.
-						Our dev team come from all over the world,
-						and their work experience in the blockchain world adds up to more than a hundred years.
+              <p>
+                一旦用户进行转发，用户就相当于发挥了分发能力，理应收到内容带来的回报，转发的轮次越多，回报也相应更多。
+                因此，用户对内容的转发，是需要向原作者购买转发权的。
+              </p>
+            </div>
+          </div>
 
-						We also have massive resources: simply imagine knewone.com built on PressOne…
-					</textarea>
-				</section>
+          <hr>
 
-			</div>
-		</div>
+          <div class="row gap-y align-items-center">
+            <div class="col-12 col-md-7">
+              <h4>内容产业的革命</h4>
+              <p>
+                在去中心化的体系中，中介（出版方和渠道）被系统和程序所替代，效率大幅度提升，同时成本也大幅度下降。
+              </p>
+              <p>
+                进而内容产业中的三个主要行为，制作、发现、分发的后两个动作（发现与分发）全部由用户完成，
+                而新的利益分配方式也使得他们有足够的动机做得更好......
+              </p>
+              <p>
+                于是，内容制作将更为精良，优秀的制作者更为心无旁骛--因为只要确保做出世界真正需要的东西，根本就不用害怕“怀才不遇”。
+              </p>
+            </div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+            <div class="col-12 col-md-5">
+                <img class="rounded shadow-2" src="assets/img/bg-man.jpg" alt="..." data-aos="zoom-in">
+            </div>
+          </div>
 
-		<script>
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
-		</script>
+        </div>
+      </section>
 
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | CTA
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+      <!-- <section class="section section-inverse py-40" style="background-color: #8ea6e6">
+        <div class="container">
+          <div class="row gap-y align-items-center">
+            <div class="col-12 col-md-9">
+              <h4 class="fw-300 mb-0">感兴趣吗？想了解的更详细一些？</h4>
+            </div>
 
-		  ga('create', 'UA-101243619-1', 'auto');
-		  ga('send', 'pageview');
+            <div class="col-12 col-md-3">
+              <a class="btn btn-round btn-white" href="#">来看这里</a>
+            </div>
+          </div>
+        </div>
+      </section> -->
 
-	</script>
-	</body>
+
+      <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Features
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+      <section class="section">
+        <div class="container">
+          <header class="section-header mb-0">
+            <small><strong>欢迎</strong></small>
+            <h2>来到去中心化的新世界</h2>
+            <br>
+          </header>
+
+          <div class="row gap-y">
+
+            <div class="col-12 offset-md-2 col-md-8 mb-30">
+              <img src="assets/img/blockchain-applications.png" alt="..." data-aos="fade-up">
+            </div>
+
+            <div class="row no-gap">
+
+              <div class="col-12 col-md-6 p-60">
+                <p class="iconbox iconbox-xxl">
+                  <i class="icon-cloud fs-40"></i>
+                </p>
+                <br><br>
+                <h5>生态圈与孵化器</h5>
+                <br>
+                <p>
+                  没有任何应用可以“满足所有需求”，所以在PressOne上可以开发多种应用，它更像是一个区块链应用孵化器。
+                  在此基础上，我们会开发和投资很多个具体应用。
+                </p>
+                <p>
+                  这可能是中国开发者快速进入区块链世界迈向巅峰的机会，在我们募集到的资金中，大部分会投入孵化器，通过培训和孵化为开发者加速，
+                  建立丰富的内容分发应用生态圈。
+                </p>
+                <p>
+                  第一个Press.One的应用将由我们自己开发作为示例，它是一个基于强关系的内容发布系统--事实上你见过的，
+                  微信公共平台就是这样一个系统。
+                  而PressOne在此基础上添加了智能合约，以进行利益的重新分配，真正让内容的生产者和分发者得到回报。
+                </p>
+              </div>
+
+
+              <div class="col-12 col-md-6 p-60">
+                <p class="iconbox iconbox-xxl">
+                  <i class="icon-linegraph fs-40"></i>
+                </p>
+                <br><br>
+                <h5>设计实现</h5>
+                <br>
+                <p>
+                  从设计上，我们会把这个系统隔离为两个层面，底层的“操作系统”和上层的”应用程序“。
+                </p>
+                <p>
+                  透明公开不可篡改的账簿、智能合约的基础架构等建立在底层，而上层的应用程序则用来完成业务逻辑和不需要去中心化的流程。
+                </p>
+                <p>
+                  PressOne是基于EOS基础设施的公链，因此底层开发将与EOS的路线图保持一致，在EOS开始公测之前，我们会完成第一个PressOne应用非区块链部分的内测与公测，
+                  届时系统中的区块链和之中的智能合约，将是模拟的版本。在EOS开始公测之后，我们将在短期内切换到EOS之上。
+                </p>
+              </div>
+
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="flexbox gap-items-4">
+                <div>
+                  <i class="fa fa-user fs-25 pt-4 text-secondary"></i>
+                </div>
+                <div>
+                  <h5>实名制</h5>
+                  <p>
+                    因为每个人的动作都伴随着由智能合约保障的交易，
+                    因此，只有通过实名验证（KYC）的用户才能在系统内发布内容，进行评论或转发，
+                    实名体系对于系统的安全与文化来说，是不可或缺的组成部分。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="flexbox gap-items-4">
+                <div>
+                  <i class="fa fa-filter fs-25 pt-4 text-secondary"></i>
+                </div>
+
+                <div>
+                  <h5>内容过滤</h5>
+                  <p>
+                    去中心化不意味着完全无限制的言论自由，有些言论是非常有害的（比如儿童色情），
+                    这些内容甚至有必要立刻删除。而去中心化的网络，可以采用基于共识的审查机制，让大众来过滤掉对大众有害的内容。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="flexbox gap-items-4">
+                <div>
+                  <i class="fa fa-registered fs-25 pt-4 text-secondary"></i>
+                </div>
+
+                <div>
+                  <h5>不可篡改</h5>
+                  <p>
+                    进入发行体系的内容（终稿并通过共识审查），是不可篡改的，进入区块链时的时间戳，
+                    是最终内容版权确认的关键之一。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="flexbox gap-items-4">
+                <div>
+                  <i class="fa fa-fire fs-25 pt-4 text-secondary"></i>
+                </div>
+
+                <div>
+                  <h5>反垃圾机制</h5>
+                  <p>
+                    通过“所有内容必须交易”的原则，可以大幅度减少垃圾内容的数量，
+                    比如一切剽窃、盗版、或者是没有价值的内容。同时，实名制的系统，剽窃盗版也会造成用户的信用降级。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="flexbox gap-items-4">
+                <div>
+                  <i class="fa fa-refresh fs-25 pt-4 text-secondary"></i>
+                </div>
+
+                <div>
+                  <h5>货币回收机制</h5>
+                  <p>
+                    系统将获得一定比例的利益分配，用于鼓励优质内容作者，以及高质量的评论者等。
+                    从另外一个角度来说，这相当于是这个经济体中的货币回收机制--用于促进体系内的货币流通。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="flexbox gap-items-4">
+                <div>
+                  <i class="fa fa-btc fs-25 pt-4 text-secondary"></i>
+                </div>
+
+                <div>
+                  <h5>应用间交易</h5>
+                  <p>
+                      用户可能会同时活跃于各个基于此内容体系下的应用，
+                      从而持有各类加密货币。因此，从机制上支持各种加密货币的兑换以及跨应用交易。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Features
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+      <section class="section">
+        <div class="container">
+          <header class="section-header mb-0">
+            <h2>管理团队</h2>
+            <br>
+          </header>
+
+          <div class="row gap-y">
+            <div class="col-12 col-md-4 team-2">
+              <a href="#">
+                <img class="team-avatar" src="assets/img/xiaolai.jpg" alt="...">
+              </a>
+              <h5>李笑来</h5>
+              <small>CEO</small>
+              <p>
+                长达7年的区块链行业经验，业内知名投资人，连续创业者
+              </p>
+              <br>
+              <div class="social social-boxed social-rounded social-gray">
+                <a class="social-twitter" href="https://twitter.com/xiaolai"><i class="fa fa-twitter"></i></a>
+                <a class="social-weibo" href="http://weibo.com/bylixiaolai"><i class="fa fa-weibo"></i></a>
+                <a class="social-mail" href="mailto:lixiaolai@gmail.com"><i class="fa fa-envelope"></i></a>
+              </div>
+            </div>
+
+
+            <div class="col-12 col-md-4 team-2">
+              <a href="#">
+                <img class="team-avatar" src="assets/img/lilu.jpg" alt="...">
+              </a>
+              <h5>李路</h5>
+              <small>CTO</small>
+              <p>
+                10年以上的软件开发管理经验，前 KnewOne/Less CEO，连续创业者
+              </p>
+              <br>
+              <div class="social social-boxed social-rounded social-gray">
+                <a class="social-github" href="https://github.com/lilu"><i class="fa fa-github"></i></a>
+                <a class="social-weibo" href="http://weibo.com/coocooba/"><i class="fa fa-weibo"></i></a>
+                <a class="social-mail" href="mailto:lilu@press.one"><i class="fa fa-envelope"></i></a>
+              </div>
+            </div>
+
+
+            <div class="col-12 col-md-4 team-2">
+              <a href="#">
+                <img class="team-avatar" src="assets/img/inblockchain.jpg" alt="...">
+              </a>
+              <h5>硬币资本(INBlockchain)</h5>
+              <small>Director</small>
+              <p>
+                区块链行业的投资与孵化平台，前后投资Steem，EOS，Sia，Zcash，QTUM等众多项目
+              </p>
+              <br>
+              <div class="social social-boxed social-rounded social-gray">
+                <a class="social-link" href="http://inblockchain.com"><i class="fa fa-globe"></i></a>
+                <a class="social-mail" href="mailto:m@inblockchain.com"><i class="fa fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+    </main>
+    <!-- END Main container -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="safe-tips-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">安全提醒</h4>
+          </div>
+          <div class="modal-body">
+            <h6>谨防假冒 PressOne 官方微信群和小密圈</h6>
+            <p>
+              由于 PressOne 项目被广泛关注，目前已经出现多个 “官方” 名义的微信群、小密圈、社区，吸引了大量关注，给用户带来了巨大的潜在风险。
+            </p>
+            <p>
+              PressOne 团队在此正式宣布：
+            </p>
+            <p>
+              <strong>没有任何微信群、小密圈、社区是被官方授权的。</strong>
+            </p>
+            <p>
+              <mark>唯一发布 PressOne 相关信息的渠道是官方网站 https://press.one</mark>
+            </p>
+            <p>
+              <strong>任何打着官方名义的微信群、小密圈、社区都有可能给你带来经济损失，甚至可能用虚假收币地址欺骗你参与 ICO，请退出一切以官方自居的社群，
+              另外，绝对不要信任本站以外所有地方出现的地址信息</strong>。
+            </p>
+            <p>
+                PressOne团队  2017年7月6日
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/core.min.js"></script>
+    <script src="assets/js/thesaas.min.js"></script>
+    <script src="assets/js/Chart.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+  </body>
 </html>
